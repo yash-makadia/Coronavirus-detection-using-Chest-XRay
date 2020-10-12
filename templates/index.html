@@ -1,0 +1,45 @@
+    
+    
+{% extends "import.html" %} 
+{% block content %}
+
+<center style="padding-top: 10%;">
+<h1><span style="color: rgb(10, 10, 10);">COVID-19 Detector</span></h1>
+    <h3><p class="mb-4" style="color: rgb(10, 10, 10);">Upload Lungs X-ray image</p></h3>
+    <!--<form id="upload-file" method="post" enctype="multipart/form-data">
+         <input type="file" name="file" class="btn btn-success" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>-->
+
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <div class="file-field">
+            <div class="d-flex justify-content-center">
+                <div class="btn btn-mdb-color btn-sucess input-group-append">
+                    <!--<span>Choose file</span>-->
+                    <input type="file" class="btn btn-dark" name="file" id="imageUpload" accept=".png, .jpg, .jpeg"></input>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <div class="image-section" style="display:none;">
+         <img id="imagePreview"  class="img-responsive" src="#" style="width:300px;height:300px;"/><br><br>
+         <div>
+            <button type="button" class="btn btn-dark btn-lg " id="btn-predict">Predict!</button>
+         </div>
+    </div>
+
+
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result">
+        <span> </span>
+
+    </h3>
+    <br>
+<div position = "absolute" bottom = "0" width= "100%" height= "0px">
+        <p>Made with ❤ by Yash Makadia</p>
+    </div>
+</center><br><br>
+{% endblock %}
